@@ -1,0 +1,2141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="mnuFile">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Fails"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="mniLogout">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Iziet no konta"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniLogoutActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mniExit">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Iziet"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniExitActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuData">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dati"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="mniClients">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Klienti"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniClientsActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mniTrainers">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Treneri"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniTrainersActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mniMemberships">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Abonementi"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniMembershipsActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mniTrainings">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nodarbību grafiks"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniTrainingsActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mniPayments">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Maksājumi"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniPaymentsActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mniMyAccount">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mans konts"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniMyAccountActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mniTrainersList">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Treneru saraksts"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniTrainersListActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuHelp">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Palīdzība"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="mniHelp">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="F1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Lietotāja instrukcija"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniHelpActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mniAbout">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Par programmu"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniAboutActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+    <Container class="javax.swing.JDialog" name="dlgLogin">
+      <Properties>
+        <Property name="title" type="java.lang.String" value="Pieslēgšanās"/>
+        <Property name="modal" type="boolean" value="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="dlgLoginWindowClosing"/>
+      </Events>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="logLblUser" min="-2" pref="110" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="logTxtUser" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="logLblPass" min="-2" pref="110" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="logTxtPass" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="logBtnLogin" min="-2" pref="130" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="logBtnRegister" min="-2" pref="130" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="logLblUser" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="logTxtUser" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="logLblPass" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="logTxtPass" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="logBtnLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="logBtnRegister" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="logLblUser">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Lietotājvārds:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="logTxtUser">
+        </Component>
+        <Component class="javax.swing.JLabel" name="logLblPass">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parole:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="logTxtPass">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logTxtPassActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="logBtnLogin">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pieslēgties"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logBtnLoginActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="logBtnRegister">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Reģistrēties"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logBtnRegisterActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="dlgRegister">
+      <Properties>
+        <Property name="title" type="java.lang.String" value="Reģistrācija"/>
+        <Property name="modal" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regLblFirst" min="-2" pref="230" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regTxtFirst" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regLblLast" min="-2" pref="230" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regTxtLast" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regLblPhone" min="-2" pref="230" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regTxtPhone" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regLblEmail" min="-2" pref="230" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regTxtEmail" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regLblBirth" min="-2" pref="230" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regTxtBirth" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regLblUser" min="-2" pref="230" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regTxtUser" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regLblPass" min="-2" pref="230" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regTxtPass" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regLblPass2" min="-2" pref="230" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regTxtPass2" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="regBtnRegister" min="-2" pref="130" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="regBtnCancel" min="-2" pref="130" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="regLblFirst" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="regTxtFirst" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="regLblLast" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="regTxtLast" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="regLblPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="regTxtPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="regLblEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="regTxtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="regLblBirth" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="regTxtBirth" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="regLblUser" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="regTxtUser" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="regLblPass" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="regTxtPass" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="regLblPass2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="regTxtPass2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="regBtnRegister" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="regBtnCancel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="regLblFirst">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Vārds:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="regTxtFirst">
+        </Component>
+        <Component class="javax.swing.JLabel" name="regLblLast">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Uzvārds:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="regTxtLast">
+        </Component>
+        <Component class="javax.swing.JLabel" name="regLblPhone">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tālrunis:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="regTxtPhone">
+        </Component>
+        <Component class="javax.swing.JLabel" name="regLblEmail">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="E-pasts:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="regTxtEmail">
+        </Component>
+        <Component class="javax.swing.JLabel" name="regLblBirth">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dzimšanas datums (gggg-mm-dd):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="regTxtBirth">
+        </Component>
+        <Component class="javax.swing.JLabel" name="regLblUser">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Lietotājvārds:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="regTxtUser">
+        </Component>
+        <Component class="javax.swing.JLabel" name="regLblPass">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parole (min. 6 simboli):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="regTxtPass">
+        </Component>
+        <Component class="javax.swing.JLabel" name="regLblPass2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parole atkārtoti:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="regTxtPass2">
+        </Component>
+        <Component class="javax.swing.JButton" name="regBtnRegister">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Reģistrēties"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="regBtnRegisterActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="regBtnCancel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Atcelt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="regBtnCancelActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="dlgClients">
+      <Properties>
+        <Property name="title" type="java.lang.String" value="Klienti"/>
+        <Property name="modal" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliLblSearch" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliTxtSearch" min="-2" pref="200" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="cliLblFilter" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliCmbFilter" min="-2" pref="200" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliBtnSearch" min="-2" pref="100" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliScroll" pref="780" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliLblFirst" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliTxtFirst" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="cliLblLast" min="-2" pref="160" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliTxtLast" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliLblPhone" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliTxtPhone" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="cliLblEmail" min="-2" pref="160" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliTxtEmail" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliLblBirth" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliTxtBirth" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="cliBtnAdd" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliBtnUpdate" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliBtnDelete" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cliBtnClear" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cliLblSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliTxtSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliLblFilter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliCmbFilter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliBtnSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="cliScroll" pref="230" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cliLblFirst" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliTxtFirst" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliLblLast" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliTxtLast" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cliLblPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliTxtPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliLblEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliTxtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cliLblBirth" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliTxtBirth" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cliBtnAdd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliBtnUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliBtnDelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cliBtnClear" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="cliLblSearch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Meklēt:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="cliTxtSearch">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cliTxtSearchActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="cliLblFilter">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Filtrs:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cliCmbFilter">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="3">
+                <StringItem index="0" value="Visi"/>
+                <StringItem index="1" value="Ar aktīvu abonementu"/>
+                <StringItem index="2" value="Bez aktīva abonementa"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cliCmbFilterActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="cliBtnSearch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Meklēt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cliBtnSearchActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="cliScroll">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="cliTblData">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="7" rowCount="0">
+                    <Column editable="false" title="ID" type="java.lang.Object"/>
+                    <Column editable="false" title="Vārds" type="java.lang.Object"/>
+                    <Column editable="false" title="Uzvārds" type="java.lang.Object"/>
+                    <Column editable="false" title="Tālrunis" type="java.lang.Object"/>
+                    <Column editable="false" title="E-pasts" type="java.lang.Object"/>
+                    <Column editable="false" title="Dzimšanas datums" type="java.lang.Object"/>
+                    <Column editable="false" title="Abonements līdz" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="cliLblFirst">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Vārds:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="cliTxtFirst">
+        </Component>
+        <Component class="javax.swing.JLabel" name="cliLblLast">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Uzvārds:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="cliTxtLast">
+        </Component>
+        <Component class="javax.swing.JLabel" name="cliLblPhone">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tālrunis:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="cliTxtPhone">
+        </Component>
+        <Component class="javax.swing.JLabel" name="cliLblEmail">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="E-pasts:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="cliTxtEmail">
+        </Component>
+        <Component class="javax.swing.JLabel" name="cliLblBirth">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dzimšanas datums:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="cliTxtBirth">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Formāts: gggg-mm-dd"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="cliBtnAdd">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pievienot"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cliBtnAddActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="cliBtnUpdate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Labot"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cliBtnUpdateActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="cliBtnDelete">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dzēst"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cliBtnDeleteActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="cliBtnClear">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Notīrīt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cliBtnClearActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="dlgTrainers">
+      <Properties>
+        <Property name="title" type="java.lang.String" value="Treneri"/>
+        <Property name="modal" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnLblSearch" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnTxtSearch" min="-2" pref="200" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="trnLblFilter" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnCmbFilter" min="-2" pref="200" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnBtnSearch" min="-2" pref="100" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnScroll" pref="780" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnLblFirst" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnTxtFirst" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="trnLblLast" min="-2" pref="160" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnTxtLast" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnLblSpec" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnTxtSpec" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="trnLblPhone" min="-2" pref="160" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnTxtPhone" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="trnBtnAdd" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnBtnUpdate" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnBtnDelete" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trnBtnClear" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="trnLblSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnTxtSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnLblFilter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnCmbFilter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnBtnSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="trnScroll" pref="230" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="trnLblFirst" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnTxtFirst" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnLblLast" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnTxtLast" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="trnLblSpec" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnTxtSpec" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnLblPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnTxtPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="trnBtnAdd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnBtnUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnBtnDelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trnBtnClear" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="trnLblSearch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Meklēt:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="trnTxtSearch">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trnTxtSearchActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="trnLblFilter">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Specializācija:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="trnCmbFilter">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trnCmbFilterActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="trnBtnSearch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Meklēt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trnBtnSearchActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="trnScroll">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="trnTblData">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="5" rowCount="0">
+                    <Column editable="false" title="ID" type="java.lang.Object"/>
+                    <Column editable="false" title="Vārds" type="java.lang.Object"/>
+                    <Column editable="false" title="Uzvārds" type="java.lang.Object"/>
+                    <Column editable="false" title="Specializācija" type="java.lang.Object"/>
+                    <Column editable="false" title="Tālrunis" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="trnLblFirst">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Vārds:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="trnTxtFirst">
+        </Component>
+        <Component class="javax.swing.JLabel" name="trnLblLast">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Uzvārds:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="trnTxtLast">
+        </Component>
+        <Component class="javax.swing.JLabel" name="trnLblSpec">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Specializācija:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="trnTxtSpec">
+        </Component>
+        <Component class="javax.swing.JLabel" name="trnLblPhone">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tālrunis:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="trnTxtPhone">
+        </Component>
+        <Component class="javax.swing.JButton" name="trnBtnAdd">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pievienot"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trnBtnAddActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="trnBtnUpdate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Labot"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trnBtnUpdateActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="trnBtnDelete">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dzēst"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trnBtnDeleteActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="trnBtnClear">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Notīrīt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trnBtnClearActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="dlgMemberships">
+      <Properties>
+        <Property name="title" type="java.lang.String" value="Abonementi"/>
+        <Property name="modal" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memLblSearch" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memTxtSearch" min="-2" pref="200" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="memLblFilter" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memCmbFilter" min="-2" pref="200" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memBtnSearch" min="-2" pref="100" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memScroll" pref="780" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memLblClient" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memCmbClient" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="memLblType" min="-2" pref="160" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memCmbType" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memLblStart" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memTxtStart" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="memLblEnd" min="-2" pref="160" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memTxtEnd" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memLblPrice" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memTxtPrice" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="memLblStatus" min="-2" pref="160" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memCmbStatus" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="memBtnAdd" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memBtnExtend" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memBtnUpdate" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memBtnDelete" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="memBtnClear" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="memLblSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memTxtSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memLblFilter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memCmbFilter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memBtnSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="memScroll" pref="230" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="memLblClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memCmbClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memLblType" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memCmbType" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="memLblStart" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memTxtStart" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memLblEnd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memTxtEnd" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="memLblPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memTxtPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memLblStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memCmbStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="memBtnAdd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memBtnExtend" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memBtnUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memBtnDelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="memBtnClear" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="memLblSearch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Klients:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="memTxtSearch">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="memTxtSearchActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="memLblFilter">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Statuss:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="memCmbFilter">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Visi"/>
+                <StringItem index="1" value="AKTĪVS"/>
+                <StringItem index="2" value="APTURĒTS"/>
+                <StringItem index="3" value="BEIDZIES"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="memCmbFilterActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="memBtnSearch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Meklēt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="memBtnSearchActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="memScroll">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="memTblData">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="7" rowCount="0">
+                    <Column editable="false" title="ID" type="java.lang.Object"/>
+                    <Column editable="false" title="Klients" type="java.lang.Object"/>
+                    <Column editable="false" title="Veids" type="java.lang.Object"/>
+                    <Column editable="false" title="No" type="java.lang.Object"/>
+                    <Column editable="false" title="Līdz" type="java.lang.Object"/>
+                    <Column editable="false" title="Cena" type="java.lang.Object"/>
+                    <Column editable="false" title="Statuss" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="memLblClient">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Klients:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="memCmbClient">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Client&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="memLblType">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Veids:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="memCmbType">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="3">
+                <StringItem index="0" value="MĒNEŠA"/>
+                <StringItem index="1" value="GADA"/>
+                <StringItem index="2" value="10 APMEKLĒJUMI"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="memCmbTypeActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="memLblStart">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sākuma datums:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="memTxtStart">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Formāts: gggg-mm-dd"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="memLblEnd">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Beigu datums:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="memTxtEnd">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="memLblPrice">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cena (EUR):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="memTxtPrice">
+        </Component>
+        <Component class="javax.swing.JLabel" name="memLblStatus">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Statuss:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="memCmbStatus">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="3">
+                <StringItem index="0" value="AKTĪVS"/>
+                <StringItem index="1" value="APTURĒTS"/>
+                <StringItem index="2" value="BEIDZIES"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="memBtnAdd">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pievienot"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="memBtnAddActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="memBtnExtend">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pagarināt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="memBtnExtendActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="memBtnUpdate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Labot"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="memBtnUpdateActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="memBtnDelete">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dzēst"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="memBtnDeleteActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="memBtnClear">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Notīrīt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="memBtnClearActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="dlgTrainings">
+      <Properties>
+        <Property name="title" type="java.lang.String" value="Nodarbību grafiks"/>
+        <Property name="modal" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgLblSearch" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgTxtSearch" min="-2" pref="140" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="trgLblFilter" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgCmbFilter" min="-2" pref="200" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgBtnSearch" min="-2" pref="100" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgScroll" pref="780" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgLblName" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgTxtName" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="trgLblTrainer" min="-2" pref="160" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgCmbTrainer" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgLblDate" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgTxtDate" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="trgLblTime" min="-2" pref="160" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgTxtTime" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgLblDuration" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgTxtDuration" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="trgLblHall" min="-2" pref="160" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgTxtHall" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgLblPlaces" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgTxtPlaces" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="trgBtnAdd" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgBtnUpdate" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgBtnDelete" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="trgBtnClear" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="trgLblSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgTxtSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgLblFilter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgCmbFilter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgBtnSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="trgScroll" pref="230" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="trgLblName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgTxtName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgLblTrainer" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgCmbTrainer" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="trgLblDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgTxtDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgLblTime" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgTxtTime" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="trgLblDuration" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgTxtDuration" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgLblHall" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgTxtHall" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="trgLblPlaces" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgTxtPlaces" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="trgBtnAdd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgBtnUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgBtnDelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="trgBtnClear" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="trgLblSearch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Datums (gggg-mm-dd):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="trgTxtSearch">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trgTxtSearchActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="trgLblFilter">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Treneris:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="trgCmbFilter">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trgCmbFilterActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="trgBtnSearch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Meklēt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trgBtnSearchActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="trgScroll">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="trgTblData">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="8" rowCount="0">
+                    <Column editable="false" title="ID" type="java.lang.Object"/>
+                    <Column editable="false" title="Nodarbība" type="java.lang.Object"/>
+                    <Column editable="false" title="Treneris" type="java.lang.Object"/>
+                    <Column editable="false" title="Datums" type="java.lang.Object"/>
+                    <Column editable="false" title="Laiks" type="java.lang.Object"/>
+                    <Column editable="false" title="Ilgums" type="java.lang.Object"/>
+                    <Column editable="false" title="Zāle" type="java.lang.Object"/>
+                    <Column editable="false" title="Brīvas / kopā" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="trgLblName">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nosaukums:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="trgTxtName">
+        </Component>
+        <Component class="javax.swing.JLabel" name="trgLblTrainer">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Treneris:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="trgCmbTrainer">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Trainer&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="trgLblDate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Datums (gggg-mm-dd):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="trgTxtDate">
+        </Component>
+        <Component class="javax.swing.JLabel" name="trgLblTime">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Laiks (hh:mm):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="trgTxtTime">
+        </Component>
+        <Component class="javax.swing.JLabel" name="trgLblDuration">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ilgums (min):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="trgTxtDuration">
+        </Component>
+        <Component class="javax.swing.JLabel" name="trgLblHall">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Zāle:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="trgTxtHall">
+        </Component>
+        <Component class="javax.swing.JLabel" name="trgLblPlaces">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Vietu skaits:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="trgTxtPlaces">
+        </Component>
+        <Component class="javax.swing.JButton" name="trgBtnAdd">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pievienot"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trgBtnAddActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="trgBtnUpdate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Labot"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trgBtnUpdateActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="trgBtnDelete">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dzēst"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trgBtnDeleteActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="trgBtnClear">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Notīrīt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="trgBtnClearActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="dlgPayments">
+      <Properties>
+        <Property name="title" type="java.lang.String" value="Maksājumi"/>
+        <Property name="modal" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payLblSearch" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payTxtSearch" min="-2" pref="200" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="payLblFilter" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payCmbFilter" min="-2" pref="200" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payBtnSearch" min="-2" pref="100" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payScroll" pref="780" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payLblClient" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payCmbClient" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="payLblMembership" min="-2" pref="160" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payCmbMembership" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payLblAmount" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payTxtAmount" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="payLblDate" min="-2" pref="160" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payTxtDate" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payLblMethod" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payCmbMethod" min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="payBtnAdd" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payBtnUpdate" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payBtnDelete" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="payBtnClear" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="payLblSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payTxtSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payLblFilter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payCmbFilter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payBtnSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="payScroll" pref="230" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="payLblClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payCmbClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payLblMembership" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payCmbMembership" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="payLblAmount" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payTxtAmount" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payLblDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payTxtDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="payLblMethod" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payCmbMethod" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="payBtnAdd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payBtnUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payBtnDelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="payBtnClear" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="payLblSearch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Klients:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="payTxtSearch">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="payTxtSearchActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="payLblFilter">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Rādīt:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="payCmbFilter">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="2">
+                <StringItem index="0" value="Visi maksājumi"/>
+                <StringItem index="1" value="Neapmaksātie abonementi"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="payCmbFilterActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="payBtnSearch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Meklēt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="payBtnSearchActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="payScroll">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="payTblData">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="6" rowCount="0">
+                    <Column editable="false" title="ID" type="java.lang.Object"/>
+                    <Column editable="false" title="Klients" type="java.lang.Object"/>
+                    <Column editable="false" title="Abonements" type="java.lang.Object"/>
+                    <Column editable="false" title="Summa" type="java.lang.Object"/>
+                    <Column editable="false" title="Datums" type="java.lang.Object"/>
+                    <Column editable="false" title="Veids" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="payLblClient">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Klients:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="payCmbClient">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="payCmbClientActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Client&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="payLblMembership">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Abonements:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="payCmbMembership">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Membership&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="payLblAmount">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Summa (EUR):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="payTxtAmount">
+        </Component>
+        <Component class="javax.swing.JLabel" name="payLblDate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Datums (gggg-mm-dd):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="payTxtDate">
+        </Component>
+        <Component class="javax.swing.JLabel" name="payLblMethod">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Maksājuma veids:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="payCmbMethod">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="3">
+                <StringItem index="0" value="Skaidra nauda"/>
+                <StringItem index="1" value="Karte"/>
+                <StringItem index="2" value="Pārskaitījums"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="payBtnAdd">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Reģistrēt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="payBtnAddActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="payBtnUpdate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Labot"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="payBtnUpdateActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="payBtnDelete">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dzēst"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="payBtnDeleteActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="payBtnClear">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Notīrīt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="payBtnClearActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="dlgMyAccount">
+      <Properties>
+        <Property name="title" type="java.lang.String" value="Mans konts"/>
+        <Property name="modal" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="accLblMembershipTitle" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="accLblMembership" pref="760" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="accLblPaymentsTitle" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="accScrollPayments" pref="760" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="accLblTrainingsTitle" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="accScrollTrainings" pref="760" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="accBtnBook" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="accBtnCancel" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="accBtnClose" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="accLblMembershipTitle" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="accLblMembership" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="accLblPaymentsTitle" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="accScrollPayments" pref="110" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="accLblTrainingsTitle" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="accScrollTrainings" pref="200" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="accBtnBook" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="accBtnCancel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="accBtnClose" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="accLblMembershipTitle">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Mans abonements:"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="1"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="accLblMembership">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="–"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="accLblPaymentsTitle">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Mani maksājumi:"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="1"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="accScrollPayments">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="accTblPayments">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="4" rowCount="0">
+                    <Column editable="false" title="Datums" type="java.lang.Object"/>
+                    <Column editable="false" title="Summa" type="java.lang.Object"/>
+                    <Column editable="false" title="Veids" type="java.lang.Object"/>
+                    <Column editable="false" title="Abonements" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="accLblTrainingsTitle">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nodarbību grafiks un mani pieraksti:"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="1"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="accScrollTrainings">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="accTblTrainings">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="6" rowCount="0">
+                    <Column editable="false" title="Nodarbība" type="java.lang.Object"/>
+                    <Column editable="false" title="Treneris" type="java.lang.Object"/>
+                    <Column editable="false" title="Datums, laiks" type="java.lang.Object"/>
+                    <Column editable="false" title="Zāle" type="java.lang.Object"/>
+                    <Column editable="false" title="Brīvas vietas" type="java.lang.Object"/>
+                    <Column editable="false" title="Pierakstīts" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="accBtnBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pierakstīties"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="accBtnBookActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="accBtnCancel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Atcelt pierakstu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="accBtnCancelActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="accBtnClose">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Aizvērt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="accBtnCloseActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="dlgHelp">
+      <Properties>
+        <Property name="title" type="java.lang.String" value="Palīdzība"/>
+        <Property name="modal" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="hlpScroll" pref="600" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="hlpBtnClose" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="hlpScroll" pref="420" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="hlpBtnClose" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="hlpScroll">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JEditorPane" name="hlpTxtHelp">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="contentType" type="java.lang.String" value="text/html"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="hlpBtnClose">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Aizvērt"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hlpBtnCloseActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="0"/>
+    <Property name="title" type="java.lang.String" value="Sporta kluba klientu sistēma “SportaKlubs”"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosing"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lblTitle" pref="560" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="btnClients" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnTrainers" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnMyAccount" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnTrainersList" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="btnMemberships" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnTrainings" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="btnPayments" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnExit" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lblStatus" pref="560" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnClients" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="btnTrainers" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="btnMyAccount" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="btnTrainersList" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnMemberships" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="btnTrainings" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnPayments" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="btnExit" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="40" max="32767" attributes="0"/>
+              <Component id="lblStatus" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="lblTitle">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sporta klubs “SportaKlubs”"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="20" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnClients">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Klienti"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClientsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnTrainers">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Treneri"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTrainersActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnMyAccount">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mans konts"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMyAccountActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnTrainersList">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Treneru saraksts"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTrainersListActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnMemberships">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Abonementi"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMembershipsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnTrainings">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nodarbību grafiks"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTrainingsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnPayments">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Maksājumi"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPaymentsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnExit">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Iziet"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExitActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblStatus">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pieslēdzies:"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
