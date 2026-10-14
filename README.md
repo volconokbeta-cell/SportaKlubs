@@ -7,3 +7,4 @@
 >  - Mācību iestāde: `Daugavpils Tehnoloģiju un tūrisma tehnikums`
 >  - Grupa: `PR-32`
 >  - Mācību gads: `2026./2027.`
+#
