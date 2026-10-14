@@ -1,7 +1,7 @@
 # 8. Sporta kluba klientu sistēma PR-32
 > [!IMPORTANT]
->1. User name: `NIKITA54TOP | Nikita Novikovs`
->2. User name: `volconokbeta-cell | Vadim Kožuhovskis`
+>1. Lietotājvārds: `NIKITA54TOP | Nikita Novikovs`
+>2. Lietotājvārds: `volconokbeta-cell | Vadim Kožuhovskis`
 
 > [!NOTE]
 >  - Projekts: `Sporta Klubs`
