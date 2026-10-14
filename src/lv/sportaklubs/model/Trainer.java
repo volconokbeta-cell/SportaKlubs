@@ -13,12 +13,6 @@ public class Trainer {
 
     /**
      * Izveido trenera objektu.
-     *
-     * @param id             trenera ID (0 – jauns)
-     * @param firstName      vārds
-     * @param lastName       uzvārds
-     * @param specialization specializācija
-     * @param phone          tālrunis
      */
     public Trainer(int id, String firstName, String lastName, String specialization, String phone) {
         this.id = id;

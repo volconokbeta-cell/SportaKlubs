@@ -12,19 +12,12 @@ import lv.sportaklubs.model.Membership;
  */
 public class MembershipDAO {
 
-    private static final String SELECT = "SELECT m.*, c.first_name || ' ' || c.last_name AS cname "
-            + "FROM MEMBERSHIPS m JOIN CLIENTS c ON c.id = m.client_id ";
+    private static final String SELECT = "SELECT m.*, c.first_name || ' ' || c.last_name AS cname " + "FROM MEMBERSHIPS m JOIN CLIENTS c ON c.id = m.client_id ";
 
     /**
      * Izveido jaunu abonementu. Beigu datums tiek aprēķināts pēc veida; ja klientam
      * jau ir aktīvs abonements, jaunais sākas nākamajā dienā pēc tā beigām.
      *
-     * @param clientId klienta ID
-     * @param type     abonementa veids
-     * @param start    vēlamais sākuma datums
-     * @param price    cena
-     * @return izveidotais abonements
-     * @throws SQLException datu bāzes kļūda
      */
     public Membership add(int clientId, String type, LocalDate start, double price) throws SQLException {
         Membership active = getActive(clientId, start);
@@ -33,9 +26,7 @@ public class MembershipDAO {
         }
         LocalDate end = start.plusDays(Membership.daysFor(type) - 1);
         Membership m = new Membership(0, clientId, type, start, end, price, "AKTĪVS");
-        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(
-                "INSERT INTO MEMBERSHIPS (client_id, type, start_date, end_date, price, status) "
-                + "VALUES (?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS)) {
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement("INSERT INTO MEMBERSHIPS (client_id, type, start_date, end_date, price, status) " + "VALUES (?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS)) {
             ps.setInt(1, clientId);
             ps.setString(2, type);
             ps.setDate(3, Date.valueOf(start));
@@ -54,14 +45,9 @@ public class MembershipDAO {
 
     /**
      * Saglabā abonementa izmaiņas (veids, datumi, cena, statuss).
-     *
-     * @param m abonements
-     * @return true, ja atjaunots
-     * @throws SQLException datu bāzes kļūda
      */
     public boolean update(Membership m) throws SQLException {
-        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(
-                "UPDATE MEMBERSHIPS SET type = ?, start_date = ?, end_date = ?, price = ?, status = ? WHERE id = ?")) {
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement("UPDATE MEMBERSHIPS SET type = ?, start_date = ?, end_date = ?, price = ?, status = ? WHERE id = ?")) {
             ps.setString(1, m.getType());
             ps.setDate(2, Date.valueOf(m.getStartDate()));
             ps.setDate(3, Date.valueOf(m.getEndDate()));
@@ -74,10 +60,6 @@ public class MembershipDAO {
 
     /**
      * Pagarina abonementu par vienu tā veida periodu un padara to aktīvu.
-     *
-     * @param m abonements
-     * @return true, ja pagarināts
-     * @throws SQLException datu bāzes kļūda
      */
     public boolean extend(Membership m) throws SQLException {
         m.setEndDate(m.getEndDate().plusDays(Membership.daysFor(m.getType())));
@@ -87,14 +69,9 @@ public class MembershipDAO {
 
     /**
      * Dzēš abonementu.
-     *
-     * @param id abonementa ID
-     * @return true, ja dzēsts
-     * @throws SQLException datu bāzes kļūda
      */
     public boolean delete(int id) throws SQLException {
-        try (PreparedStatement ps = DBConnection.getConnection()
-                .prepareStatement("DELETE FROM MEMBERSHIPS WHERE id = ?")) {
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement("DELETE FROM MEMBERSHIPS WHERE id = ?")) {
             ps.setInt(1, id);
             return ps.executeUpdate() == 1;
         }
@@ -102,14 +79,9 @@ public class MembershipDAO {
 
     /**
      * Abonementiem, kuru beigu datums ir pagājis, iestata statusu BEIDZIES.
-     *
-     * @param today šodienas datums
-     * @return mainīto ierakstu skaits
-     * @throws SQLException datu bāzes kļūda
      */
     public int expireOld(LocalDate today) throws SQLException {
-        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(
-                "UPDATE MEMBERSHIPS SET status = 'BEIDZIES' WHERE end_date < ? AND status = 'AKTĪVS'")) {
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement("UPDATE MEMBERSHIPS SET status = 'BEIDZIES' WHERE end_date < ? AND status = 'AKTĪVS'")) {
             ps.setDate(1, Date.valueOf(today));
             return ps.executeUpdate();
         }
@@ -117,11 +89,6 @@ public class MembershipDAO {
 
     /**
      * Meklē abonementus pēc klienta vārda un statusa.
-     *
-     * @param clientText klienta vārda daļa
-     * @param status     statuss vai "Visi"
-     * @return abonementu saraksts
-     * @throws SQLException datu bāzes kļūda
      */
     public List<Membership> search(String clientText, String status) throws SQLException {
         String sql = SELECT + "WHERE LOWER(c.first_name || ' ' || c.last_name) LIKE ?";
@@ -137,15 +104,9 @@ public class MembershipDAO {
             return read(ps);
         }
     }
-
-    /**
-     * @param clientId klienta ID
-     * @return visi klienta abonementi
-     * @throws SQLException datu bāzes kļūda
-     */
+    
     public List<Membership> getByClient(int clientId) throws SQLException {
-        try (PreparedStatement ps = DBConnection.getConnection()
-                .prepareStatement(SELECT + "WHERE m.client_id = ? ORDER BY m.end_date DESC")) {
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(SELECT + "WHERE m.client_id = ? ORDER BY m.end_date DESC")) {
             ps.setInt(1, clientId);
             return read(ps);
         }
@@ -153,11 +114,6 @@ public class MembershipDAO {
 
     /**
      * Atrod klienta aktīvo abonementu norādītajā datumā.
-     *
-     * @param clientId klienta ID
-     * @param date     datums
-     * @return aktīvais abonements vai null
-     * @throws SQLException datu bāzes kļūda
      */
     public Membership getActive(int clientId, LocalDate date) throws SQLException {
         for (Membership m : getByClient(clientId)) {
@@ -170,13 +126,9 @@ public class MembershipDAO {
 
     /**
      * Atgriež abonementus, par kuriem samaksāts mazāk par cenu.
-     *
-     * @return neapmaksāto abonementu saraksts
-     * @throws SQLException datu bāzes kļūda
      */
     public List<Membership> getUnpaid() throws SQLException {
-        String sql = SELECT + "WHERE m.price > (SELECT COALESCE(SUM(p.amount), 0) FROM PAYMENTS p "
-                + "WHERE p.membership_id = m.id) ORDER BY m.start_date";
+        String sql = SELECT + "WHERE m.price > (SELECT COALESCE(SUM(p.amount), 0) FROM PAYMENTS p " + "WHERE p.membership_id = m.id) ORDER BY m.start_date";
         try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(sql)) {
             return read(ps);
         }

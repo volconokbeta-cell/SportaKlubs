@@ -17,11 +17,6 @@ public class User {
 
     /**
      * Izveido lietotāja objektu.
-     *
-     * @param id           lietotāja ID
-     * @param username     lietotājvārds
-     * @param passwordHash paroles SHA-256 jaucējkods
-     * @param role         loma ADMIN vai CLIENT
      */
     public User(int id, String username, String passwordHash, String role) {
         this.id = id;

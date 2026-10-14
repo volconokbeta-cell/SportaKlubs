@@ -17,14 +17,6 @@ public class Client {
 
     /**
      * Izveido klienta objektu.
-     *
-     * @param id        klienta ID (0 – jauns klients)
-     * @param userId    saistītā konta ID vai null
-     * @param firstName vārds
-     * @param lastName  uzvārds
-     * @param phone     tālrunis
-     * @param email     e-pasts
-     * @param birthDate dzimšanas datums vai null
      */
     public Client(int id, Integer userId, String firstName, String lastName,
                   String phone, String email, LocalDate birthDate) {

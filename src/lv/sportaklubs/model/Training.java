@@ -19,14 +19,6 @@ public class Training {
 
     /**
      * Izveido nodarbības objektu.
-     *
-     * @param id              nodarbības ID (0 – jauna)
-     * @param name            nosaukums
-     * @param trainerId       trenera ID
-     * @param startTime       sākuma laiks
-     * @param durationMin     ilgums minūtēs
-     * @param hall            zāle
-     * @param maxParticipants maksimālais dalībnieku skaits
      */
     public Training(int id, String name, int trainerId, LocalDateTime startTime,
                     int durationMin, String hall, int maxParticipants) {

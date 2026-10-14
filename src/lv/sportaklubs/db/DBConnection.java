@@ -51,8 +51,6 @@ public final class DBConnection {
 
     /**
      * Maina datu bāzes adresi (izmanto testos atmiņas datu bāzei).
-     *
-     * @param newUrl JDBC adrese
      */
     public static void setUrl(String newUrl) {
         url = newUrl;
@@ -61,9 +59,6 @@ public final class DBConnection {
 
     /**
      * Atgriež savienojumu ar datu bāzi; pirmajā reizē izveido tabulas.
-     *
-     * @return savienojums
-     * @throws SQLException ja savienojumu neizdodas izveidot
      */
     public static Connection getConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
@@ -75,9 +70,6 @@ public final class DBConnection {
 
     /**
      * Izveido tabulas un administratora kontu, ja tabulu vēl nav.
-     *
-     * @param con savienojums
-     * @throws SQLException ja SQL komanda neizdodas
      */
     private static void createTables(Connection con) throws SQLException {
         try (ResultSet rs = con.getMetaData().getTables(null, null, "USERS", null)) {
@@ -89,8 +81,7 @@ public final class DBConnection {
             for (String sql : DDL) {
                 st.executeUpdate(sql);
             }
-            st.executeUpdate("INSERT INTO USERS (username, password_hash, role) VALUES ('admin', '"
-                    + PasswordUtil.hash("admin123") + "', 'ADMIN')");
+            st.executeUpdate("INSERT INTO USERS (username, password_hash, role) VALUES ('admin', '" + PasswordUtil.hash("admin123") + "', 'ADMIN')");
         }
     }
 }

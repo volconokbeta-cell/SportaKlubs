@@ -17,11 +17,6 @@ public class Booking {
 
     /**
      * Izveido pieraksta objektu.
-     *
-     * @param id         pieraksta ID
-     * @param clientId   klienta ID
-     * @param trainingId nodarbības ID
-     * @param bookedAt   pieraksta laiks
      */
     public Booking(int id, int clientId, int trainingId, LocalDateTime bookedAt) {
         this.id = id;

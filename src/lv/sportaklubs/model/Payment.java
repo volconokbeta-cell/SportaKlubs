@@ -20,13 +20,6 @@ public class Payment {
 
     /**
      * Izveido maksājuma objektu.
-     *
-     * @param id           maksājuma ID (0 – jauns)
-     * @param clientId     klienta ID
-     * @param membershipId abonementa ID
-     * @param amount       summa
-     * @param payDate      datums
-     * @param method       maksājuma veids
      */
     public Payment(int id, int clientId, int membershipId, double amount, LocalDate payDate, String method) {
         this.id = id;

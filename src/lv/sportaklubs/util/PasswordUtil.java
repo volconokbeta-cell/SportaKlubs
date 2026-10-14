@@ -13,9 +13,6 @@ public final class PasswordUtil {
 
     /**
      * Aprēķina paroles SHA-256 jaucējkodu.
-     *
-     * @param password parole
-     * @return 64 simbolu heksadecimāla virkne
      */
     public static String hash(String password) {
         try {

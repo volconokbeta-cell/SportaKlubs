@@ -13,20 +13,13 @@ import lv.sportaklubs.model.Training;
  */
 public class TrainingDAO {
 
-    private static final String SELECT = "SELECT t.*, tr.first_name || ' ' || tr.last_name AS tname, "
-            + "(SELECT COUNT(*) FROM BOOKINGS b WHERE b.training_id = t.id) AS booked "
-            + "FROM TRAININGS t JOIN TRAINERS tr ON tr.id = t.trainer_id ";
+    private static final String SELECT = "SELECT t.*, tr.first_name || ' ' || tr.last_name AS tname, " + "(SELECT COUNT(*) FROM BOOKINGS b WHERE b.training_id = t.id) AS booked " + "FROM TRAININGS t JOIN TRAINERS tr ON tr.id = t.trainer_id ";
 
     /**
      * Pievieno nodarbību.
-     *
-     * @param t nodarbība (tiek iestatīts ID)
-     * @throws SQLException datu bāzes kļūda
      */
     public void add(Training t) throws SQLException {
-        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(
-                "INSERT INTO TRAININGS (name, trainer_id, start_time, duration_min, hall, max_participants) "
-                + "VALUES (?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS)) {
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement("INSERT INTO TRAININGS (name, trainer_id, start_time, duration_min, hall, max_participants) " + "VALUES (?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS)) {
             fill(ps, t);
             ps.executeUpdate();
             try (ResultSet k = ps.getGeneratedKeys()) {
@@ -39,15 +32,9 @@ public class TrainingDAO {
 
     /**
      * Saglabā nodarbības izmaiņas.
-     *
-     * @param t nodarbība
-     * @return true, ja atjaunota
-     * @throws SQLException datu bāzes kļūda
      */
     public boolean update(Training t) throws SQLException {
-        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(
-                "UPDATE TRAININGS SET name = ?, trainer_id = ?, start_time = ?, duration_min = ?, hall = ?, "
-                + "max_participants = ? WHERE id = ?")) {
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement("UPDATE TRAININGS SET name = ?, trainer_id = ?, start_time = ?, duration_min = ?, hall = ?, " + "max_participants = ? WHERE id = ?")) {
             fill(ps, t);
             ps.setInt(7, t.getId());
             return ps.executeUpdate() == 1;
@@ -56,14 +43,9 @@ public class TrainingDAO {
 
     /**
      * Dzēš nodarbību (kopā ar tās pierakstiem).
-     *
-     * @param id nodarbības ID
-     * @return true, ja dzēsta
-     * @throws SQLException datu bāzes kļūda
      */
     public boolean delete(int id) throws SQLException {
-        try (PreparedStatement ps = DBConnection.getConnection()
-                .prepareStatement("DELETE FROM TRAININGS WHERE id = ?")) {
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement("DELETE FROM TRAININGS WHERE id = ?")) {
             ps.setInt(1, id);
             return ps.executeUpdate() == 1;
         }
@@ -71,11 +53,6 @@ public class TrainingDAO {
 
     /**
      * Atgriež nodarbības ar filtru pēc datuma un trenera.
-     *
-     * @param date      datums vai null (visi datumi)
-     * @param trainerId trenera ID vai 0 (visi treneri)
-     * @return nodarbību saraksts pēc laika
-     * @throws SQLException datu bāzes kļūda
      */
     public List<Training> search(LocalDate date, int trainerId) throws SQLException {
         String sql = SELECT + "WHERE 1 = 1";
@@ -100,10 +77,6 @@ public class TrainingDAO {
 
     /**
      * Atrod nodarbību pēc ID.
-     *
-     * @param id nodarbības ID
-     * @return nodarbība vai null
-     * @throws SQLException datu bāzes kļūda
      */
     public Training getById(int id) throws SQLException {
         try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(SELECT + "WHERE t.id = ?")) {
@@ -115,11 +88,6 @@ public class TrainingDAO {
 
     /**
      * Pārbauda, vai zāle norādītajā laikā ir aizņemta ar citu nodarbību.
-     *
-     * @param t         pārbaudāmā nodarbība
-     * @param excludeId nodarbības ID, kuru neņem vērā (labojot), vai 0
-     * @return true, ja laiki pārklājas
-     * @throws SQLException datu bāzes kļūda
      */
     public boolean isHallBusy(Training t, int excludeId) throws SQLException {
         for (Training o : search(t.getStartTime().toLocalDate(), 0)) {

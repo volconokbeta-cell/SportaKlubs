@@ -28,9 +28,6 @@ public final class Ui {
 
     /**
      * Parāda informatīvu ziņojumu.
-     *
-     * @param parent vecāka komponents
-     * @param msg    ziņojuma teksts
      */
     public static void info(Component parent, String msg) {
         JOptionPane.showMessageDialog(parent, msg, "Informācija", JOptionPane.INFORMATION_MESSAGE);
@@ -38,9 +35,6 @@ public final class Ui {
 
     /**
      * Parāda kļūdas ziņojumu.
-     *
-     * @param parent vecāka komponents
-     * @param msg    ziņojuma teksts
      */
     public static void error(Component parent, String msg) {
         JOptionPane.showMessageDialog(parent, msg, "Kļūda", JOptionPane.ERROR_MESSAGE);
@@ -48,9 +42,6 @@ public final class Ui {
 
     /**
      * Parāda brīdinājumu.
-     *
-     * @param parent vecāka komponents
-     * @param msg    ziņojuma teksts
      */
     public static void warn(Component parent, String msg) {
         JOptionPane.showMessageDialog(parent, msg, "Uzmanību", JOptionPane.WARNING_MESSAGE);
@@ -58,10 +49,6 @@ public final class Ui {
 
     /**
      * Uzdod jautājumu ar pogām Jā/Nē.
-     *
-     * @param parent vecāka komponents
-     * @param msg    jautājums
-     * @return true, ja lietotājs izvēlējās “Jā”
      */
     public static boolean confirm(Component parent, String msg) {
         return JOptionPane.showConfirmDialog(parent, msg, "Apstiprinājums", JOptionPane.YES_NO_OPTION,
@@ -70,9 +57,6 @@ public final class Ui {
 
     /**
      * Parāda datu bāzes kļūdu.
-     *
-     * @param parent vecāka komponents
-     * @param e      izņēmums
      */
     public static void dbError(Component parent, SQLException e) {
         error(parent, "Datu bāzes kļūda: " + e.getMessage());
@@ -80,8 +64,6 @@ public final class Ui {
 
     /**
      * Noformē GUI Builder izveidotu tabulu: vienas rindas izvēle, rindas augstums, šaura ID kolonna.
-     *
-     * @param t tabula
      */
     public static void setupTable(JTable t) {
         t.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -95,11 +77,6 @@ public final class Ui {
 
     /**
      * Atgriež tabulā izvēlētās rindas ID (pirmā kolonna) vai parāda brīdinājumu.
-     *
-     * @param parent vecāka komponents
-     * @param t      tabula
-     * @param what   ko jāizvēlas (piem., “klientu”)
-     * @return ID vai null, ja nekas nav izvēlēts
      */
     public static Integer selectedId(Component parent, JTable t, String what) {
         int row = t.getSelectedRow();

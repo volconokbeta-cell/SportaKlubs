@@ -23,14 +23,6 @@ public class Membership {
 
     /**
      * Izveido abonementa objektu.
-     *
-     * @param id        abonementa ID (0 – jauns)
-     * @param clientId  klienta ID
-     * @param type      veids
-     * @param startDate sākuma datums
-     * @param endDate   beigu datums
-     * @param price     cena
-     * @param status    statuss
      */
     public Membership(int id, int clientId, String type, LocalDate startDate,
                       LocalDate endDate, double price, String status) {
@@ -45,9 +37,6 @@ public class Membership {
 
     /**
      * Aprēķina abonementa derīguma dienu skaitu pēc veida.
-     *
-     * @param type abonementa veids
-     * @return dienu skaits (30, 365 vai 90)
      */
     public static int daysFor(String type) {
         switch (type) {
@@ -59,9 +48,6 @@ public class Membership {
 
     /**
      * Pārbauda, vai abonements ir derīgs norādītajā datumā.
-     *
-     * @param date pārbaudāmais datums
-     * @return true, ja statuss ir AKTĪVS un datums ir derīguma periodā
      */
     public boolean isActive(LocalDate date) {
         return "AKTĪVS".equals(status) && !date.isBefore(startDate) && !date.isAfter(endDate);
